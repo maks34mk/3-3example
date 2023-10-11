@@ -1,0 +1,177 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	int num1;
+	long long num2;
+	double num3;
+	double num31;
+	int num51 = 0;
+	int num52 = 0;
+	int num5 = 0;
+	int num6 = 0;
+	int n = 10;
+	double u = 1;
+	cout << "[1]Перевод мер длины" << endl;
+	cout << "[2]Вклад в банк" << endl;
+	cout << "[3]Вычисление" << endl;
+	cout << "[4]Ввод чисел с клавиатуры" << endl;
+	cout << "[5]Равнобедренный треугольник" << endl;
+	cout << "" << endl;
+	cout << "Введите нужный вам пункт:";
+	cin >> num1;
+	system("cls");
+
+
+	switch (num1) {
+	case 1:
+		cout << "[1]Саженей в метры(1 сажень равна 2.1366 м)" << endl;
+		cout << "[2]Из дюймов в сантиметре (1 дюйм равен 2.5 см)" << endl;
+		cout << "[3]Футы в метры(1 фут равен 0.3048м)" << endl;
+		cout << "[4]Драхм в граммы(1 драхмы равна 3.7325г)" << endl;
+		cout << "[5]Унций в граммы(1 унция равна 29.86г)" << endl;
+		cout << "[6]Фунтов в килограмм(1 фунт равен 0.40951кг)" << endl;
+		cout << "[7]Аршинов в метры(1 аршин равен 0.7112м)" << endl;
+		cout << "[8]Золотников в граммы(1 золотник равен 4.2657г)" << endl;
+		cout << "[9]Дюймов в миллиметры(1 дюйм равен 25.3995мм)" << endl;
+		cout << "" << endl;
+		cout << "Введите пункт который вам нужен:";
+		cin >> num1;
+
+
+		switch (num1)
+		{
+		case 1:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 2, 1366;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+		case 2:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 2, 5;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+		case 3:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 0, 3048;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 4:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 3, 7325;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 5:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 29, 86;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 6:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 0, 40951;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 7:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 0, 7112;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 8:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 4, 2657;
+			cout << "Ответ:" << num2 << endl;
+			break;
+
+
+		case 9:
+			cout << "Введите число, которое вы хотите перевести:" << endl;
+			cin >> num2;
+			num2 = num2 * 25, 3995;
+			cout << "Ответ:" << num2 << endl;
+			break;
+		default:
+			cout << "Вы ввели некорректный номер";
+			break;
+		}
+		break;
+	case 2:
+		cout << "Введите какую сумму вы хотите внести:" << endl;
+		cin >> num3;
+		cout << "Сколько лет вы будете хранить деньги в банке:" << endl;
+		cin >> num31;
+		num2 = num3 + ((num3 * 0.03) * num31);
+		cout << "Вывод с банка:" << num2 << endl;
+		break;
+	case 3:
+		for (int i = 1; i <= n; i++)
+			u *= (i * (i + 1)) / 2;
+		cout << u << endl;
+
+		break;
+	case 4:
+		cout << "Введите число (0 - это выход): \n";
+
+
+		do {
+			cout << "Число " << num51 + 1 << "=";
+			cin >> num5;
+
+			if (num5) {
+				num51++;
+				num52 += num5;
+			}
+		} while (num5);
+
+		cout << "Количество введенных чисел :" << num51 + 1 << endl;
+		cout << "Общяя сумма:" << num52 << endl;
+		cout << "Среднее арифметическое :" << num52 / (num51 + 1) << endl;
+		break;
+	case 5:
+		cout << "Введите высоту треугольника:" << endl;
+		cin >> num6;
+
+		for (int i = 0; i < num6; i++)
+		{
+			for (int j = 1; j < num6 - i; j++)
+			{
+				cout << ' ';
+			}
+
+			for (int j = num6 - 2 * i; j <= num6; j++)
+			{
+				cout << '*';
+			}
+			cout << endl;
+		}
+
+		break;
+
+
+	default:
+		cout << "Вы ввели некоректные данные";
+		break;
+	}
+	return 0;
+}
